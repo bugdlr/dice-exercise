@@ -1,0 +1,80 @@
+body {
+  text-align: center;
+}
+
+.die {
+  color: #6ec1ad;
+  margin: 1rem;
+  font-size: 6rem;
+}
+
+.shaking {
+  transform: rotate(1deg);
+}
+
+button {
+  display: block;
+  background-color: #E27D60;
+  color: #fff;
+  margin: 1rem auto;
+  padding: 1rem 2.7rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  box-shadow: .2rem .5rem 1rem rgba(0,0,0,.3);
+  transition: all .2s;
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: .2rem .5rem 1rem rgba(0,0,0,.2);
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:focus {
+  outline: none;
+}
+
+button[disabled] {
+  color: #dcdcdc;
+}
+
+.shaking {
+  animation-name: wobble;
+  animation-duration: .8s;
+}
+
+@keyframes wobble {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
